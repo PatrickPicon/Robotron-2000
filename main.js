@@ -1,5 +1,8 @@
+let index = -1;
 const controle = document.querySelectorAll("[data-controle]")
 const estatisticas = document.querySelectorAll("[data-estatistica]")
+const cores = ["preto", "vermelho", "rosa", "azul", "amarelo", "branco"]
+const robotron = document.querySelector("#robotron")
 const pecas = {
     "bracos": {
         "forca": 29,
@@ -60,3 +63,11 @@ function atualizaEstatisticas(peca) {
     })
 }
 
+robotron.addEventListener("click", () => {
+    if(index >= 5) {
+        index = -1;
+    } 
+    index++ 
+    
+    document.querySelector(".robo").src="img/robotron " + cores[index] + ".png";
+})
