@@ -69,5 +69,5 @@ robotron.addEventListener("click", () => {
     } 
     index++ 
     
-    document.querySelector(".robo").src="img/robotron " + cores[index] + ".png";
+    document.querySelector(".robo").src="robotron " + cores[index] + ".png";
 })
